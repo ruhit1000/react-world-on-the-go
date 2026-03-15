@@ -7,12 +7,10 @@ const Countries = ({ countriesPromise }) => {
 
     const handleVisitiedCountries = (country) => {
         if (visitedCountries.includes(country)) {
-            const copyOfVisitedCountries = [...visitedCountries]
-            const updatedVisitedCountries = copyOfVisitedCountries.filter(item => item.cca3.cca3 !== country.cca3.cca3)
+            const updatedVisitedCountries = [...visitedCountries].filter(item => item.cca3.cca3 !== country.cca3.cca3)
             setVisitedCountries(updatedVisitedCountries)
         } else {
-            const newVisitedCountries = [...visitedCountries, country]
-            setVisitedCountries(newVisitedCountries)
+            setVisitedCountries([...visitedCountries, country])
         }
     }
 
