@@ -16,6 +16,7 @@ const Country = ({ country, handleVisitiedCountries }) => {
             <p>Population: {country.population.population}</p>
             <p>Capital: {country.capital.capital}</p>
             <p>Area: {country.area.area} {country.area.area > 300000? '(Big Country)': '(Small Country)'}</p>
+            <p>Continent: {country.continents.continents}</p>
             <button onClick={handleVisited}>{isVisited? "Visited" : "Not Visited"}</button>
         </div>
     );
